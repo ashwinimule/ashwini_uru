@@ -23,7 +23,7 @@ public class Attribute extends MasterEntity
 	private String atrributeType;
 	
 	@ManyToOne
-	@JoinColumn(name = "product_type_id", nullable = false)
+	@JoinColumn(name = "product_type_id", nullable = true)
 	private ProductType productType;
 	
 	@OneToMany(mappedBy="attribute", cascade=CascadeType.ALL)

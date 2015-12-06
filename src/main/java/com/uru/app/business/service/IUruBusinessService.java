@@ -2,6 +2,7 @@ package com.uru.app.business.service;
 
 import java.util.List;
 
+import com.uru.app.model.ItemModel;
 import com.uru.app.model.ProductCatalogModel;
 import com.uru.app.model.UruModel;
 
@@ -15,5 +16,6 @@ public interface IUruBusinessService {
 	
 	public List<ProductCatalogModel> getAllRootCategories();
 	
+	public boolean createProduct(ProductCatalogModel pcm);
 
 }

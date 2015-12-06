@@ -9,10 +9,12 @@ import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
+import com.uru.app.business.exception.UruApplicationException;
 import com.uru.app.business.util.EntityToModelUtil;
 import com.uru.app.business.util.ModelToEntityUtil;
 import com.uru.app.common.MySQLURUDatabase;
 import com.uru.app.dao.IProductCatalogDao;
+import com.uru.app.entity.Item;
 import com.uru.app.entity.ProductCatalog;
 import com.uru.app.model.ProductCatalogModel;
 
@@ -34,8 +36,12 @@ public class ProductCatalogDaoImpl implements IProductCatalogDao {
 	@Override
 	public boolean create(ProductCatalogModel pcModel)
 	{
-		// TODO Auto-generated method stub
-		return false;
+		if(pcModel == null) {
+			throw new UruApplicationException("Illegal Product data. Product creation failed.");
+		}
+		ProductCatalog entity = m2e.convertProductCatalogToEntity(pcModel);
+		em.persist(entity);
+		return true;
 	}
 
 	@Override

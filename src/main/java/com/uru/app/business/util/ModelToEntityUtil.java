@@ -55,7 +55,7 @@ public class ModelToEntityUtil {
 	
 	public ProductType convertProductTypeModelToEntity(ProductTypeModel model) {
 		ProductType prodType = new ProductType();
-		prodType.setId(model.getId());
+		//prodType.setId(model.getId());
 		prodType.setProdType(model.getProdType());
 		prodType.setProdTypeDesc(model.getProdTypeDesc());
 		
@@ -87,7 +87,7 @@ public class ModelToEntityUtil {
 	public Item convertItemModelToEntity(ItemModel model) {
 		Item item = new Item();
 		item.setItemName(model.getItemName());
-		item.setItemName(model.getItemDescription());
+		item.setItemDescription(model.getItemDescription());
 		item.setLargeImg(model.getLargeImg());
 		item.setSmallImg(model.getSmallImg());
 

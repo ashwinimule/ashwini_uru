@@ -1,5 +1,6 @@
 package com.uru.app.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
@@ -20,7 +21,7 @@ public class AttributeValue extends MasterEntity
 	private String attValue;
 	
 	
-	@ManyToOne
+	@ManyToOne(cascade=CascadeType.ALL)
     @JoinColumn(name="att_id")
 	private Attribute attribute;
 

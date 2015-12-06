@@ -49,4 +49,11 @@ public class UruBusinessServiceImpl implements IUruBusinessService {
 	}
 
 
+
+	@Override
+	public boolean createProduct(ProductCatalogModel pcm) {
+		return productCatalogDao.create(pcm);
+	}
+
+
 }
