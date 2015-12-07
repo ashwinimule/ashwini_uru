@@ -38,7 +38,8 @@
             // on success, display all account info and continue.
 
             router.map([
-                { route:'',moduleId:'viewmodels/productCatalog',nav:true,title:'Login'}
+                { route:'',moduleId:'viewmodels/login',nav:true,title:'Login'},
+                { route:'home',moduleId:'viewmodels/homePage',nav:true,title:'URU Home'}
             ]).buildNavigationModel();
             return router.activate();
            /* var data=null;

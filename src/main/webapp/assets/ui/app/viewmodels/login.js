@@ -23,10 +23,7 @@ define(['plugins/router', 'durandal/app','plugins/http','knockout'], function (r
     }
 
     function logout(){
-       // session.isAuthenticated(false);
-      //  session.profile.clear();
-       // router.navigate('login');
-        window.location.href='/CaseManagementSystem/login.jsp';
+        window.location.href='/uruApp/index.html';
     }
 
     function activate(){
@@ -34,14 +31,10 @@ define(['plugins/router', 'durandal/app','plugins/http','knockout'], function (r
     }
 
     function signIn(){
-//        console.log("Login now..."+config.configData.baseUrl+config.configData.authUrl+", email: "+email()+", pass: "+password());
-//        return http.post('http://localhost:8888/application/auth/signin',{email: email(), password:password()}).then(function(response){
-//            console.log(response);
-//            session.isAuthenticated(true);
-//            session.profile.populate(response);
-//
-//            router.navigate('');
-//
-//        });
+
+    	if(password() == email()) {
+    		router.navigate('home');
+    	}
+				
     }
 });

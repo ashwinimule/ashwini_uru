@@ -6,7 +6,7 @@
         http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
 
 	<persistence-unit name="urudb" transaction-type="JTA">
-		<jta-data-source>java:jboss/datasources/optiuru</jta-data-source>
+		<jta-data-source>java:jboss/datasources/uruds</jta-data-source>
 		<class>com.uru.app.entity.UruEntity</class>
 		
 		<class>com.uru.app.entity.ProductCatalog</class>

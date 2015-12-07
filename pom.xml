@@ -572,6 +572,11 @@
 			<artifactId>commons-fileupload</artifactId>
 			<version>1.2</version>
 		</dependency>
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>7.0</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -592,5 +597,5 @@
 	</build>
 
 
-	<artifactId>UruApplication</artifactId>
+	<artifactId>PocApp</artifactId>
 </project>
